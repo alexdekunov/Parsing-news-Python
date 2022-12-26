@@ -15,3 +15,9 @@
     URLS = "адрес сайта"
     ```
 5. Делаем импорт из файла setting.py `from setting import KEY, URLS`
+
+
+# Парсинг новостей
+1. Для парсинга новостей устанавливаем библиотеку `pip install beautifulsoup4`
+2. Добавляем в файл `from bs4 import BeautifulSoup`
+
