@@ -9,7 +9,7 @@
   <body>
     <div class="container">
         <h3>{% if weather %}
-                Погода: {{ weather.temp_C }}, ощущается как: {{ weather. FeelsLikeC }}
+                Погода: {{ weather.temp_C }}. Ощущается как: {{ weather. FeelsLikeC }}
             {% else %}
                 Сервис погоды временно не доступен
             {% endif %}

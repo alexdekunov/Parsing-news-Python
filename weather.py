@@ -1,9 +1,9 @@
 import requests
-from setting import KEY
+from setting import KEY, URLS
 
 def weather_by_city(city_name):
     '''Принимает на вход название города и выдаёт в формате json результат'''
-    weather_url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
+    weather_url = URLS
     params = {
         "key": KEY,
         "q": city_name,
