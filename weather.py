@@ -1,10 +1,11 @@
 import requests
+from setting import KEY
 
 def weather_by_city(city_name):
     '''Принимает на вход название города и выдаёт в формате json результат'''
     weather_url = "http://api.worldweatheronline.com/premium/v1/weather.ashx"
     params = {
-        "key": "66505f37b624404a8e2183606222412",
+        "key": KEY,
         "q": city_name,
         "format": "json",
         "num_of_days": 1,
