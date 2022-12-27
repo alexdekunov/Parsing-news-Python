@@ -1,11 +1,11 @@
+from flask import current_app
 import requests
-from setting import KEY, URLS
 
 def weather_by_city(city_name):
     '''Принимает на вход название города и выдаёт в формате json результат'''
-    weather_url = URLS
+    weather_url = current_app.config["URLS"]
     params = {
-        "key": KEY,
+        "key": current_app.config["WEATHER_API_KEY"],
         "q": city_name,
         "format": "json",
         "num_of_days": 1,
