@@ -21,3 +21,27 @@
 1. Для парсинга новостей устанавливаем библиотеку `pip install beautifulsoup4`
 2. Добавляем в файл `from bs4 import BeautifulSoup`
 
+# База данных
+Для хранения информации создадим базу данных. Будем использовать пакет Flask-SQLAlchemy.
+Установим библиотеку.
+```
+pip install flask-sqlalchemy
+```
+### Конфигурация
+Задаём путь к нашей sqlite-базе.
+Flask-SQLAlchemy ожидает найти этот параметр в конфигурации по ключу SQLALCHEMY_DATABASE_URI.
+
+Помимо этого задаём путь к файлу не прописывая его "вручную".
+Для этого импортируем в файл `config.py` библиотеку os `import os` и в переменной пишем путь
+```commandline
+SQLALCHEMY_DATABASE_URL = "sqlite:///" + os.path.join(basedir, '..', 'webapp.db')
+```
+Для визуализации ставим DB Browser for SQLite, который дает удобный графический интерфейс.
+
+### Опишем наши модели. 
+создадим файл model.py 
+```
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()```
+
