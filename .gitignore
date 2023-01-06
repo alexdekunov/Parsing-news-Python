@@ -6,3 +6,4 @@ __pycache__
 setting.py
 .idea/
 config.py
+*.db
